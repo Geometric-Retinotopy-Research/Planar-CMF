@@ -14,7 +14,7 @@ hitmat_side = cell(181,1);
 
 
 %% start
-for subi = 2:2
+for subi = 1:length(subjects)
     %% Prepare data
     fn = subjects(subi).name;
     [Fm, Vm, Em]=read_mfile(['../data/mesh_data/' fn]);

@@ -2,8 +2,9 @@ clear; clc; close all;
 
 LIM = 2;
 avgCM_final = cell(181,1);
+subjects = dir('../result/OT_CMF/*lh.mat');
 
-for subi = 1:1
+for subi = 1:length(subjects)
     %% load data 
     side = 'rh';
     load("../result/OT_CMF/" + string(subi) + side + ".mat");
@@ -149,8 +150,8 @@ for subi = 1:1
     xlim([-LIM, LIM]);
     ylim([-LIM, LIM]);
     
-    exportgraphics(gca, sprintf('../CMF_figure/bothside/%d.emf', subi), BackgroundColor='none');
-    exportgraphics(gca, sprintf('../CMF_figure/bothside/%d.png', subi), BackgroundColor='none');
+    exportgraphics(gca, sprintf('../result/CMF_figure/%d.emf', subi), BackgroundColor='none');
+    exportgraphics(gca, sprintf('../result/CMF_figure/%d.png', subi), BackgroundColor='none');
     avgCM_final{subi} = avgCM_filtered_smoothed;
     
     %% Plot 0
@@ -190,7 +191,7 @@ for subi = 1:1
     grid on;
     xlim([-pi/2 pi/2])
 
-    %close all;
+    close all;
 end
 
-%save("../result/OT_CMF/CMF_final.mat", "avgCM_final");
+save("../result/OT_CMF/CMF_final.mat", "avgCM_final");
