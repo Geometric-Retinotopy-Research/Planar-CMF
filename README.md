@@ -2,7 +2,7 @@
 
 This repository contains code for computing cortical magnification factor (CMF) and generating analysis results based on planar retinotopic maps.
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 root/
@@ -20,7 +20,7 @@ root/
 
 Download the required dataset from the following link:
 
-**[Download Data](https://example.com/data-link)**
+**[Example HCP preprocessed data](https://osf.io/zbhn7/)**
 
 Place the unzipped `data/` folder **next to** the `codes/` folder (i.e., as a sibling directory in the repository root) as shown above.
 

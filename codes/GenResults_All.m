@@ -2,7 +2,7 @@ clear;clc;close all;
 
 
 side = 'lh';
-subjects = dir(['../data/mesh_data/*' side '.m']);
+subjects = dir(['../data/HCP_data/*' side '.m']);
 rng(0)
 
 %% things to save
@@ -17,7 +17,7 @@ hitmat_side = cell(181,1);
 for subi = 1:length(subjects)
     %% Prepare data
     fn = subjects(subi).name;
-    [Fm, Vm, Em]=read_mfile(['../data/mesh_data/' fn]);
+    [Fm, Vm, Em]=read_mfile(['../data/HCP_data/' fn]);
 
     % Load the full hemisphere
     %[Ffull,Vfull, Efull]=read_mfile(['../data/mesh_data/' fn(1:end-2) '_ecc.m']);
