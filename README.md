@@ -1,7 +1,7 @@
 # Planar-CMF
 
 This repository contains code for computing cortical magnification factor (CMF) and generating analysis results based on planar retinotopic maps.
-[📄 View the PDF](./NIMG_CMF_new.pdf)
+[📄 View the PDF](https://arxiv.org/pdf/2512.06492)
 
 ## Directory Structure
 
